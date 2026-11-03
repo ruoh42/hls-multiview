@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border);
+}
+
+.panel-header {
+  height: 44px;
+}
+
+body:not([data-tab='chat']) .audio-follow {
+  visibility: hidden;
+}
+
+body[data-tab='chat'] .panel-body {
+  display: none;
+}
+
+.resize-handle {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 6px;
+  cursor: col-resize;
+}
+
+.resize-handle:hover,
+body.resizing .resize-handle {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+body.resizing {
+  cursor: col-resize;
+}
+
+.stream {
+  cursor: pointer;
+}
+
+.stream:hover {
+  background: var(--surface);
+}
+
+.icon-btn:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.icon-btn.danger:hover {
+  color: var(--danger);
+}

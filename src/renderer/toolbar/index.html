@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:"
+    />
+    <title>toolbar</title>
+    <link rel="stylesheet" href="../common/theme.css" />
+    <link rel="stylesheet" href="toolbar.css" />
+  </head>
+  <body>
+    <nav id="scope-tabs" class="tabs" aria-label="보기 범위"></nav>
+
+    <form id="add-form" class="add">
+      <input
+        id="channel-input"
+        type="text"
+        placeholder="채널 ID 또는 chzzk.naver.com/live/… 주소"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="submit">추가</button>
+    </form>
+
+    <div id="layout-toggle" class="segmented" role="radiogroup" aria-label="레이아웃">
+      <button type="button" data-layout="grid" role="radio">그리드</button>
+      <button type="button" data-layout="focus" role="radio">1+N</button>
+    </div>
+
+    <div class="spacer"></div>
+
+    <button id="panel-btn" type="button" aria-pressed="true" title="방송 목록 · 채팅 패널 열기/닫기">패널</button>
+    <button id="login-btn" type="button">로그인</button>
+    <button id="settings-btn" type="button" title="설정" aria-label="설정">⚙</button>
+
+    <script src="toolbar.js"></script>
+  </body>
+</html>

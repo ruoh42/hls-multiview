@@ -1,0 +1,49 @@
+:root {
+  --bg: #141517;
+  --surface: #1f2024;
+  --surface-hover: #2a2c31;
+  --border: #33353b;
+  --text: #e8e9eb;
+  --text-dim: #9a9ca3;
+  --accent: #00ffa3;
+  --accent-text: #0b0c0d;
+  --danger: #ff6b6b;
+  --live: #e5484d;
+  --warn: #f5a524;
+  --idle: #2b2f55;
+  --idle-text: #b9c0ff;
+  --font: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', Roboto, 'Noto Sans KR', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.4 var(--font);
+  user-select: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}

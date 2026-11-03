@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'"
+    />
+    <title>설정</title>
+    <link rel="stylesheet" href="../common/theme.css" />
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <form id="form" class="settings">
+      <section>
+        <h2>소리</h2>
+        <label class="row">
+          <span>
+            <strong>소리 연동</strong>
+            <small>선택한 채팅의 방송만 소리가 납니다. 끄면 방송별로 따로 조절합니다.</small>
+          </span>
+          <input type="checkbox" name="audioFollowsChat" />
+        </label>
+      </section>
+
+      <section>
+        <h2>화질 · 성능</h2>
+        <label class="row">
+          <span>
+            <strong>최대 화질</strong>
+            <small>모든 칸에 적용됩니다. 자동이면 칸 크기에 맞춰 고릅니다.</small>
+          </span>
+          <select name="maxQuality">
+            <option value="0">자동</option>
+            <option value="1080">1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+            <option value="360">360p</option>
+          </select>
+        </label>
+        <label class="row">
+          <span>
+            <strong>자원 부족 시 자동 조절</strong>
+            <small>메모리 · CPU가 부족하면 작은 칸의 화질을 낮추고, 그래도 부족하면 작은 칸부터 잠시 멈춥니다.</small>
+          </span>
+          <input type="checkbox" name="autoDegrade" />
+        </label>
+        <label class="row">
+          <span>
+            <strong>유지할 채팅 수</strong>
+            <small>최근 본 채팅을 이만큼 열어 두어 탭 전환이 바로 됩니다. 많을수록 메모리를 더 씁니다.</small>
+          </span>
+          <input type="number" name="chatKeepAlive" min="1" max="10" step="1" />
+        </label>
+      </section>
+    </form>
+    <script src="settings.js"></script>
+  </body>
+</html>

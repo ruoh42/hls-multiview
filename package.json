@@ -1,0 +1,32 @@
+{
+  "name": "hls-multiview",
+  "productName": "HLS Multiview",
+  "version": "0.1.0",
+  "description": "라이브 멀티뷰 데스크톱 앱",
+  "private": true,
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "dev": "npm run build && electron .",
+    "dist": "npm run typecheck && npm run build:prod && electron-builder --mac",
+    "build:prod": "node scripts/build.mjs --prod",
+    "dist:win": "npm run typecheck && npm run build:prod && electron-builder --win --x64",
+    "build:mobile": "node scripts/build.mjs --mobile --prod",
+    "mobile:sync": "npm run typecheck && npm run build:mobile && cap sync android",
+    "mobile:android": "npm run mobile:sync && cap open android",
+    "apk": "npm run mobile:sync && cd android && ./gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/preferences": "^8.0.1",
+    "@types/node": "^26.6.5",
+    "electron": "^44.9.0",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "hls.js": "^1.7.3",
+    "typescript": "^7.0.2"
+  }
+}

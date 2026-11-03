@@ -1,0 +1,9 @@
+{
+  "appId": "io.github.insanephin.hlsmultiview",
+  "appName": "HLS Multiview",
+  "webDir": "dist-mobile",
+  "backgroundColor": "#1d1d1d",
+  "android": {
+    "allowMixedContent": false
+  }
+}

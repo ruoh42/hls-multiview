@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src blob:; connect-src https://*.pstatic.net"
+    />
+    <title>grid</title>
+    <link rel="stylesheet" href="../common/theme.css" />
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="tiles.css" />
+  </head>
+  <body>
+    <p id="empty" class="empty">검색창에 채널 ID 또는 라이브 주소를 입력하여 방송을 추가해주세요.</p>
+    <div id="tiles"></div>
+    <script src="grid.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:"
+    />
+    <title>panel</title>
+    <link rel="stylesheet" href="../common/theme.css" />
+    <link rel="stylesheet" href="../common/streams.css" />
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <div id="resize-handle" class="resize-handle" title="드래그해서 너비 조절 · 더블클릭하면 기본 너비"></div>
+
+    <header class="panel-header">
+      <nav class="panel-tabs" role="tablist">
+        <button type="button" role="tab" data-tab="list">방송 목록</button>
+        <button type="button" role="tab" data-tab="chat">채팅</button>
+      </nav>
+      <label class="audio-follow" title="선택한 채팅의 방송만 소리가 나게 합니다">
+        <input id="audio-follow" type="checkbox" />
+        <span>소리 연동</span>
+      </label>
+    </header>
+
+    <nav id="chat-tabs" class="chat-tabs" role="tablist" aria-label="방송별 채팅"></nav>
+
+    <section class="panel-body" role="tabpanel">
+      <ul id="stream-list" class="stream-list"></ul>
+      <p id="empty" class="list-empty" hidden>추가된 방송이 없습니다.</p>
+    </section>
+
+    <script src="panel.js"></script>
+  </body>
+</html>
